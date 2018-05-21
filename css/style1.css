@@ -1,0 +1,217 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    width: 100%;
+    background: #00316b;
+}
+
+ul {
+    width: 80%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+        font-size:1.2em;
+    }
+
+        ul li:hover {
+            background: #e91e63;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+.body{
+    background-image :url("../images/food.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    height:100vh;
+    opacity:0.8;
+}
+
+.label {
+    background: darkorange;
+    color: black;
+    text-align: center;
+}
+.toggle {
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+#btnClick {
+    color: #fff;
+    background: #00316b;
+    cursor: pointer;
+    font-weight: 400;
+    font-size:1.5em;
+    padding:5px;
+    margin-left:180px;
+    text-align: center;
+    line-height: 1.5em;
+    border: 1px solid;
+    border-color: #007bff;
+    justify-content:center;
+}
+
+/*Style form accordion*/
+
+.accordion {
+    margin: 1em auto;
+    max-width: 75%;
+}
+
+    .accordion dt,
+    .accordion dd,
+    .accordion figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    .accordion dt {
+        background-color: deepskyblue;
+        border-bottom: 1px solid dotted;
+        border-radius: 7px 7px 0 0;
+        color: white;
+        font-size: 1.5em;
+        margin-top: 0.222em;
+        padding: 0.5em 1em;
+    }
+
+    .accordion dd {
+        border: 1px solid deepskyBlue;
+        border-top: none;
+        border-radius: 0 0 7px 7px;
+        padding: 1em;
+    }
+
+        .accordion dd p {
+            line-height: 1.5;
+        }
+    .accordion dd button{
+        display:none;
+    }
+    .accordion figure {
+        float:right;
+        margin: 0 0 0.5em 1em;
+        width: 218px;
+    }
+    .dd{
+        background-color:white;
+    }
+    .accordion figcaption {
+        font-size: 0.75em;
+        color: dimgray;
+    }
+
+        .accordion figcaption a {
+            color: deepskyblue;
+        }
+
+    .accordion dd:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+
+    .accordion dd figure img {
+        display:flex;
+        width: 200px;
+        height: 150px;
+    }
+
+.jsOn .accordion dt {
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+    .jsOn .accordion dt:before {
+        content: '+';
+        margin-right: 0.5em;
+    }
+
+.jsOn .accordion dd {
+    border-color: chocolate;
+}
+
+.accordion dt.open {
+    background-color: darkorange;
+    border-bottom-color: chocolate;
+    border-radius: 7px 7px 0 0;
+}
+
+    .accordion dt.open:before {
+        content: '\2013';
+        margin-right: 0.7em;
+    }
+/*Style for responsivse menu*/
+
+@media screen and (max-width:768px) {
+    .body{
+        height:100%;
+    }
+     .toggle {
+        display: block;
+    }
+    h3{
+        font-size:1.5em
+    }
+    ul {
+        width: 100%;
+        display: none;
+    }
+
+        ul li {
+            display: block;
+            text-align: center;
+        }
+
+    .active {
+        display: block;
+    }
+    #btnClick{
+        margin-left:40px;
+         text-align:center;
+    }
+    .accordion{
+        max-width:75%;
+    }
+    .accordion figure {
+        float:left;
+        margin: 0 0 0.5em 1em;
+        width: 218px;
+    }
+    .accordion dt{
+        font-size:1.5em;
+        line-height:2;
+    }
+    .accordion dd figure img {
+        display:flex;
+         width: 200px;
+        height: 150px;
+        cursor:pointer;
+    }
+     .accordion dd button{
+        display:block;
+    }
+     .accordion dd p{
+         font-size:1.3em;
+     }
+    .moreInfo{
+        display:none;
+    }
+}
